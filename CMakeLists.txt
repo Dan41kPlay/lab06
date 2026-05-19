@@ -19,3 +19,16 @@ install(TARGETS hello_world solver
 install(DIRECTORY formatter_lib/ formatter_ex_lib/ solver_lib/
 	DESTINATION include
 	FILES_MATCHING PATTERN "*.h")
+
+include(InstallRequiredSystemLibraries)
+
+set(CPACK_PACKAGE_NAME "solver")
+set(CPACK_PACKAGE_VENDOR "dp apps")
+set(CPACK_PACKAGE_CONTACT ${GITHUB_EMAIL})
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "solver app for quadratic equations")
+set(CPACK_PACKAGE_VERSION_MAJOR "1")
+set(CPACK_PACKAGE_VERSION_MINOR "0")
+set(CPACK_PACKAGE_VERSION_PATCH "0")
+
+set(CPACK_GENERATOR "ZIP;TGZ")
+

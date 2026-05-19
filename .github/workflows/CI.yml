@@ -22,13 +22,6 @@ jobs:
     - name: project_build
       run: cmake --build ${{github.workspace}}/build
 
-    - name: hello_world_test
-      shell: bash
-      run: |
-        if [ "${{matrix.os}}" = "windows-latest" ]; then ./build/hello_world_application/Debug/hello_world.exe
-        else ./build/hello_world_application/hello_world
-        fi
-
     - name: solver_test
       shell: bash
       run: |

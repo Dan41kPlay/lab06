@@ -32,3 +32,4 @@ set(CPACK_PACKAGE_VERSION_PATCH "0")
 
 set(CPACK_GENERATOR "ZIP;TGZ")
 
+include(CPack)

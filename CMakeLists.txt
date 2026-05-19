@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(lab03)
+project(lab06)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -14,7 +14,7 @@ install(TARGETS formatter formatter_ex solver_lib
 	ARCHIVE DESTINATION lib
 	LIBRARY DESTINATION lib
 	RUNTIME DESTINATION bin)
-install(TARGETS hello_world solver
+install(TARGETS solver
 	RUNTIME DESTINATION bin)
 install(DIRECTORY formatter_lib/ formatter_ex_lib/ solver_lib/
 	DESTINATION include
@@ -31,7 +31,6 @@ set(CPACK_PACKAGE_VERSION_MINOR "0")
 set(CPACK_PACKAGE_VERSION_PATCH "0")
 
 set(CPACK_GENERATOR "ZIP;TGZ")
-set(CPACK_BUILD_CONFIG ${CMAKE_BUILD_TYPE})
 
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "dp229")
 set(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>= 2.43)")

@@ -18,7 +18,7 @@ jobs:
       - name: project_configure
         run: cmake -B build -D CMAKE_BUILD_TYPE=Release
       - name: solver_build
-        run: cmake --build build --target solver --config Release
+        run: cmake --build build --config Release
       - name: solver_pack
         run: |
           cd build
@@ -39,11 +39,11 @@ jobs:
       - name: project_configure
         run: cmake -B build -D CMAKE_BUILD_TYPE=Release
       - name: solver_build
-        run: cmake --build build --target solver --config Release
+        run: cmake --build build --config Release
       - name: solver_pack
         run: |
           cd build
-          cpack -G WIX -C Release
+          cpack -G WIX
       - name: files_upload
         uses: softprops/action-gh-release@v3
         with:
@@ -57,7 +57,7 @@ jobs:
       - name: project_configure
         run: cmake -B build -D CMAKE_BUILD_TYPE=Release
       - name: solver_build
-        run: cmake --build build --target solver --config Release
+        run: cmake --build build --config Release
       - name: solver_pack
         run: |
           cd build

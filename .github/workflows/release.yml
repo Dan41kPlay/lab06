@@ -20,7 +20,7 @@ jobs:
       - name: solver_build
         run: cmake --build build --target solver --config Release
       - name: solver_install
-        run: cmake --install build
+        run: sudo cmake --install build
       - name: solver_pack
         run: |
           cd build

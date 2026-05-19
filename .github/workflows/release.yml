@@ -43,7 +43,7 @@ jobs:
       - name: solver_pack
         run: |
           cd build
-          cpack -G WIX || cpack -G NSIS
+          cpack -G WIX
       - name: files_upload
         uses: softprops/action-gh-release@v3
         with:

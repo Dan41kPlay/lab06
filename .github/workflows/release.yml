@@ -19,8 +19,6 @@ jobs:
         run: cmake -B build -D CMAKE_BUILD_TYPE=Release
       - name: solver_build
         run: cmake --build build --target solver --config Release
-      #- name: solver_install
-      #  run: sudo cmake --install build
       - name: solver_pack
         run: |
           cd build
@@ -42,8 +40,6 @@ jobs:
         run: cmake -B build -D CMAKE_BUILD_TYPE=Release
       - name: solver_build
         run: cmake --build build --target solver --config Release
-      - name: solver_install
-        run: cmake --install build
       - name: solver_pack
         run: |
           cd build
@@ -62,8 +58,6 @@ jobs:
         run: cmake -B build -D CMAKE_BUILD_TYPE=Release
       - name: solver_build
         run: cmake --build build --target solver --config Release
-      - name: solver_install
-        run: cmake --install build
       - name: solver_pack
         run: |
           cd build

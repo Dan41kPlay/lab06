@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
 project(lab06)
 
+set(PVERSION_MAJOR "1")
+set(PVERSION_MINOR "0")
+set(PVERSION_PATCH "1")
+set(PVERSION_TWEAK "a2")
+
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -19,10 +24,5 @@ install(TARGETS solver
 install(DIRECTORY formatter_lib/ formatter_ex_lib/ solver_lib/
 	DESTINATION include
 	FILES_MATCHING PATTERN "*.h")
-
-set(PVERSION_MAJOR "1")
-set(PVERSION_MINOR "0")
-set(PVERSION_PATCH "1")
-set(PVERSION_TWEAK "a1")
 
 include(CPackConfig.cmake)

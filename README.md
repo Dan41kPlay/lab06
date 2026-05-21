@@ -15,7 +15,7 @@
 
 ### Главные файлы в этой лабораторной работе
 
-Обновлённый [CMakeLists](CMakeLists.txt) c конфигурациями для CPack
+Обновлённый [CMakeLists](CMakeLists.txt) c импортом [конфигураций для CPack](CPackConfig.cmake)
 
 Создание релизов: [release.yml](.github/workflows/release.yml)
 

@@ -20,20 +20,9 @@ install(DIRECTORY formatter_lib/ formatter_ex_lib/ solver_lib/
 	DESTINATION include
 	FILES_MATCHING PATTERN "*.h")
 
-include(InstallRequiredSystemLibraries)
+set(PVERSION_MAJOR "1")
+set(PVERSION_MINOR "0")
+set(PVERSION_PATCH "1")
+set(PVERSION_TWEAK "a1")
 
-set(CPACK_PACKAGE_NAME "solver")
-set(CPACK_PACKAGE_VENDOR "dp apps")
-set(CPACK_PACKAGE_CONTACT ${GITHUB_EMAIL})
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "solver app for quadratic equations")
-set(CPACK_PACKAGE_VERSION_MAJOR "1")
-set(CPACK_PACKAGE_VERSION_MINOR "0")
-set(CPACK_PACKAGE_VERSION_PATCH "0")
-
-set(CPACK_GENERATOR "ZIP;TGZ")
-
-set(CPACK_DEBIAN_PACKAGE_MAINTAINER "dp229")
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>= 2.43)")
-
-
-include(CPack)
+include(CPackConfig.cmake)
